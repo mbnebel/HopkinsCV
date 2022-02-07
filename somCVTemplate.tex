@@ -92,8 +92,7 @@
 \newcommand{\myben}[1]
     {\smallskip
     \begin{enumerate}[start=1, widest = {99}, leftmargin =*, label={\footnotesize \arabic*$\ $}]
-    \setlength{\itemsep}{#1}
-    \vspace*{-0.7em}}
+    \setlength{\itemsep}{#1}}
 
 \newcommand{\ee}{\end{enumerate}}
 
@@ -214,8 +213,9 @@ Notes:
 % Use the standard reference citation format: 
 % Author F/MI, Second author F/MI, Third author F/MI, (etc.). Title. Journal. Year; Volume (Number): page-page. 
 % Example: Jones BB, *Smith JB, Friend LM. Title of article. J Am Soc. 2015;14(1):16-42; *corresponding author; [SI/QI].
+% Double-spacing between entrees is not allowed (but single spacing is ugly).
 
-\myben{0.4em}
+\myben{-0.9em} %negative values shrink space
 
 \item
 citation\\
@@ -226,7 +226,7 @@ citation\\
 \ee
 
 \subsection*{Review Articles [RA]}
-\myben{0.4em}
+\myben{-0.9ex}
 \item
 \mine
 \ee

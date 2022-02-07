@@ -1,8 +1,8 @@
 \documentclass[11pt]{article}
-%Required C.V. Format:
-%Top & Left Margins: 0.75”  
-%Right & Bottom Margins: 0.5” 
-%Page Numbers:	Right, bottom corner in footer, 0.3” from bottom
+% Required C.V. Format:
+% Top & Left Margins: 0.75”  
+% Right & Bottom Margins: 0.5” 
+% Page Numbers:	Right, bottom corner in footer, 0.3” from bottom
 \usepackage[left=.75in,
  top=.75in,
  right=.5in,
@@ -14,30 +14,34 @@
 %\usepackage{ebgaramond}
 \usepackage{CormorantGaramond}
 
-%Tabs: Do not use special tabbing
+% Tabs: Do not use special tabbing
 %Tables/Charts: Do not use tables/charts
 
-%Headings	All headings and subheadings must be included in your C.V. unless otherwise noted below.  If there is no information to report, write “None” to the right of the heading/subheading.  Group “None” headings together, single spaced, at the end of each section.
+% Headings	
+% All headings and subheadings must be included in your C.V. unless otherwise noted below.  
+% If there is no information to report, write “None” to the right of the heading/subheading.  
+% Group “None” headings together, single spaced, at the end of each section.
 	
-%Dates: Chronological order – list earliest date first under each heading
-%Date Styles: Show numerically only, with no extra zeros in months/days
-%Examples:
-%Year: 1997	Month and Year: 1/77
-%Year to Year: 1977-1979		
-%Month/Day/Year: 5/1/77
-%Year to present: 1997-present	
-%Month/DAYS/Year: 5/1-23/77
-%Year to Month/Year: 1977-2/85	
-%Month/Year to Month/Year: 5/77-2/85
-%Month/Year to Month/Day/Year: 	1/77-2/15/85
-%Month/Day/Year to Month/Day/Year: 	5/1/77-2/2/85 
+% Dates: Chronological order – list earliest date first under each heading
+% Date Styles: Show numerically only, with no extra zeros in months/days
+% Examples:
+% Year: 1997	
+% Month and Year: 1/77
+% Year to Year: 1977-1979		
+% Month/Day/Year: 5/1/77
+% Year to present: 1997-present	
+% Month/DAYS/Year: 5/1-23/77
+% Year to Month/Year: 1977-2/85	
+% Month/Year to Month/Year: 5/77-2/85
+% Month/Year to Month/Day/Year: 	1/77-2/15/85
+% Month/Day/Year to Month/Day/Year: 5/1/77-2/2/85 
 
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-%remove page number from center of footer
+% remove page number from center of footer
 \cfoot{}
-%add page number to right side of footer
+% add page number to right side of footer
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -45,7 +49,7 @@
 \usepackage{color,colordvi,textcomp,hyperref,graphicx}
 \usepackage{array}
 
-%color definitions from https://brand.jhu.edu/color/
+% color definitions from https://brand.jhu.edu/color/
 \definecolor{color0}{RGB}{0,0,0} % black
 \definecolor{color1}{RGB}{114,172,229} %JHU "spirit" blue
 \definecolor{color2}{RGB}{113,128,128} %nickel
@@ -56,7 +60,7 @@
 
 \setlength{\fboxsep}{2.5pt}
 
-%from Betsy's template
+% from Betsy's template
 \newenvironment{lyxlist}[1]
 	{\begin{list}{}
 		{\setlength\itemsep{-0.5ex}
@@ -66,7 +70,7 @@
 		 \renewcommand{\makelabel}[1]{##1\hfil}}}
 	{\end{list}}
 
-%from Carrie's CV	
+% from Carrie's CV	
 \newcommand{\mine}{
   \addtocounter{enumi}{1}
 \item[\fcolorbox{white}{color1}{\color{white} \scriptsize \arabic{enumi}}]
@@ -96,6 +100,9 @@
 
 \usepackage{titlesec}
 %\titlespacing{<command>}{<left>}{<before-sep>}{<after-sep>}
+%em: ~ the width of an "M" in the current font
+%ex: ~ the height of an "x" in the current font
+%pc - pica (12pt/pc)
 \titlespacing{\section}{0pc}{1ex}{1ex}
 \titlespacing{\subsection}{0pc}{0pc}{.5ex}
 \titlespacing{\subsubsection}{0pc}{0pc}{.2ex}
@@ -109,10 +116,12 @@
 The Johns Hopkins School of Medicine\\
 \end{center}
 
+%use minipage to put things close together that are normally tricky to place close together
+%lots of trial & error here
 \begin{minipage}[t]{0.3\textwidth}
   \centering\raisebox{\dimexpr \topskip-\height}{%
   \includegraphics[width=\textwidth]{mySignature.png}}\\
-  \mylift{-1.7em}
+  \mylift{-1.7ex} %so printed name is not awkwardly far from signature
   \begin{flushleft}\myname\end{flushleft}
 \end{minipage}
 \begin{minipage}[t]{0.65\textwidth}
@@ -166,9 +175,9 @@ Notes:
 \end{lyxlist}
 
 \subsection*{Professional Experience}
-%Internship, residency, fellowship, etc. 
-%Indicate primary mentors for scholarly activities where applicable
-%Year		Position, Institution/City
+% Internship, residency, fellowship, etc. 
+% Indicate primary mentors for scholarly activities where applicable
+% Year		Position, Institution/City
 
 \begin{lyxlist}{0000-present}
 \item [{20{*}{*}\textendash 20{*}{*}}]position, institution, city
@@ -177,24 +186,26 @@ Notes:
 
 \section*{PUBLICATIONS \ {\small \em  White numbers indicate first or senior author manuscripts.}}
 
-%Instructions for all publication types:	
-%List in chronological order, with earliest first
-%Under each heading, number consecutively starting at 1
-%Only the candidate’s name should be bolded (do not bold journal titles, society names or mentee names)
-%Do not include submitted, in preparation or planned manuscript
-%In the list of authors:	Show all authors for all publications
-%Bold your name as an author in each publication
-%Indicate mentees by underlining their names
-%Delete extra periods 
-%Delete “and” between author names
-%If you are not the first or senior author, or the list of authors is 10 or more, specify the following at the end of the reference: 
-%Your role - such as data analysis, manuscript writing, obtained funding, steering committee, etc. 
-%Joint authorship or corresponding authorship
-%[SI/QI] if the article is also considered to be a system innovation/quality improvement publication 
+% Instructions for all publication types:	
+% List in chronological order, with earliest first
+% Under each heading, number consecutively starting at 1
+% Bold your name as an author in each publication
+% Indicate mentees by underlining their names
+% Only the candidate’s name should be bolded (do not bold journal titles, society names, or mentee names)
+% DO NOT include submitted, in preparation or planned manuscript
+% In the list of authors: Show all authors for all publications
+% Delete extra periods 
+% Delete “and” between author names
+% If you are not the first or senior author, or the list of authors is 10 or more, specify the following at the end of the reference: 
+% Your role - such as data analysis, manuscript writing, obtained funding, steering committee, etc. 
+% Joint authorship or corresponding authorship
+% [SI/QI] if the article is also considered to be a system innovation/quality improvement publication 
 
 \subsection*{Original Research [OR]}
-%Include multi-authored clinical trials, experimental studies (including in vivo, in vitro, in silico studies), educational research, systematic reviews, meta-analyses. 
-%Use the standard reference citation format: Author F/MI, Second author F/MI, Third author F/MI, (etc.). Title. Journal. Year; Volume (Number): page-page. Example: Jones BB, *Smith JB, Friend LM. Title of article. J Am Soc. 2015;14(1):16-42; *corresponding author; [SI/QI].
+% Include multi-authored clinical trials, experimental studies (including in vivo, in vitro, in silico studies), educational research, systematic reviews, meta-analyses. 
+% Use the standard reference citation format: 
+% Author F/MI, Second author F/MI, Third author F/MI, (etc.). Title. Journal. Year; Volume (Number): page-page. 
+% Example: Jones BB, *Smith JB, Friend LM. Title of article. J Am Soc. 2015;14(1):16-42; *corresponding author; [SI/QI].
 
 \myben{0.4em}
 
@@ -212,18 +223,18 @@ citation\\
 \mine
 \ee
 
-%Optional sections
-%Guidelines/Protocols, Consensus Statement, Expert Opinion, Consortium Articles [GL] 
-%Editorials [ED]
-%Letters, Correspondence [LT]
-%Proceedings Reports [PR]					
-%Methods and Techniques, “How I Do It” articles [MT] 	 
-%Research Letters/White Papers/Brief Reports [RL]		
-%Published Curricula [PC], Learner Assessment Tools [PC] 	 
-%Media Releases or Interviews [MR]
-%Other Media [OM] (Videos, Websites, Blogs, Social Media, etc.)
+% Optional sections
+% Guidelines/Protocols, Consensus Statement, Expert Opinion, Consortium Articles [GL] 
+% Editorials [ED]
+% Letters, Correspondence [LT]
+% Proceedings Reports [PR]					
+% Methods and Techniques, “How I Do It” articles [MT] 	 
+% Research Letters/White Papers/Brief Reports [RL]		
+% Published Curricula [PC], Learner Assessment Tools [PC] 	 
+% Media Releases or Interviews [MR]
+% Other Media [OM] (Videos, Websites, Blogs, Social Media, etc.)
 
-%Mandatory but empty sections can be listed at the end of the section, single-spaced
+% Mandatory but empty sections can be listed at the end of the section, single-spaced
 \subsection*{Case Reports [CR] \ {\normalfont {\color{color0} None.}}} 
 \subsection*{Book Chapters, Monographs [BC] \ {\normalfont {\color{color0} None.}}}
 \subsection*{Books, Textbooks [BK] \ {\normalfont {\color{color0} None.}}}
@@ -235,14 +246,14 @@ citation\\
 % List funding in chronological order (earliest first by start date) under the appropriate subheading(s) % Advise if a current grant is in a No Cost Extension (NCE)
 %Required format:
 %Date		Title
-%Identification number, Sponsor
-%Total direct cost
-%PI: Principal Investigator [if not you] Role; your percent effort; Notes
+% Identification number, Sponsor
+% Total direct cost
+% PI: Principal Investigator [if not you] Role; your percent effort; Notes
 
 \subsection*{EXTRAMURAL FUNDING}
 \subsection*{Research Extramural Funding}
 %Grants or contracts obtained to support a research initiative
-\begin{lyxlist}{00/00/00-00/00/00 n.c.e}
+\begin{lyxlist}{00/00/00-00/00/00 n.c.e} %try to set input to \begin{lyxlist} so that space between date and description is relatively uniform across a page, or at least across similar sections
 \item[{\textcolor{color1}{Current}}] 
 
 \item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\

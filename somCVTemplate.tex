@@ -1,0 +1,633 @@
+\documentclass[11pt]{article}
+%Required C.V. Format:
+%Top & Left Margins: 0.75”  
+%Right & Bottom Margins: 0.5” 
+%Page Numbers:	Right, bottom corner in footer, 0.3” from bottom
+\usepackage[left=.75in,
+ top=.75in,
+ right=.5in,
+ bottom=.5in,
+ footskip=.2in]{geometry}
+ 
+%Font: Size 11 font in Times New Roman or Garamond
+\usepackage[T1]{fontenc}
+%\usepackage{ebgaramond}
+\usepackage{CormorantGaramond}
+
+%Tabs: Do not use special tabbing
+%Tables/Charts: Do not use tables/charts
+
+%Headings	All headings and subheadings must be included in your C.V. unless otherwise noted below.  If there is no information to report, write “None” to the right of the heading/subheading.  Group “None” headings together, single spaced, at the end of each section.
+	
+%Dates: Chronological order – list earliest date first under each heading
+%Date Styles: Show numerically only, with no extra zeros in months/days
+%Examples:
+%Year: 1997	Month and Year: 1/77
+%Year to Year: 1977-1979		
+%Month/Day/Year: 5/1/77
+%Year to present: 1997-present	
+%Month/DAYS/Year: 5/1-23/77
+%Year to Month/Year: 1977-2/85	
+%Month/Year to Month/Year: 5/77-2/85
+%Month/Year to Month/Day/Year: 	1/77-2/15/85
+%Month/Day/Year to Month/Day/Year: 	5/1/77-2/2/85 
+
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%remove page number from center of footer
+\cfoot{}
+%add page number to right side of footer
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{color,colordvi,pxfonts,marvosym,textcomp,hyperref,graphicx,enumitem}
+\usepackage{array}
+\usepackage{tabularx, multirow}
+
+%color definitions from https://brand.jhu.edu/color/
+\definecolor{color0}{RGB}{0,0,0} % black
+\definecolor{color1}{RGB}{114,172,229} %JHU "spirit" blue
+\definecolor{color2}{RGB}{113,128,128} %nickel
+\definecolor{color3}{RGB}{0,45,114} %JHU "heritage" blue
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1ex plus0.5ex minus0.2ex} 
+
+\setlength{\fboxsep}{2.5pt}
+
+%from Betsy's template
+\newenvironment{lyxlist}[1]
+	{\begin{list}{}
+		{\setlength\itemsep{-0.5ex}
+		\settowidth{\labelwidth}{#1}
+		 \setlength{\leftmargin}{\labelwidth}
+		 \addtolength{\leftmargin}{\labelsep}
+		 \renewcommand{\makelabel}[1]{##1\hfil}}}
+	{\end{list}}
+
+%from Carrie's CV	
+\newcommand{\mine}{
+  \addtocounter{enumi}{1}
+\item[\fcolorbox{white}{color1}{\color{white} \scriptsize \arabic{enumi}}]
+}
+
+\usepackage{calc}
+\newcommand{\myrole}[1]{
+  {\color{color3} \rlap{\underline{Role:}} \hspace{\widthof{Role: }}#1}
+}
+
+\newcommand{\myben}[1]
+    {\smallskip
+    \begin{enumerate}[start=1, widest = {99}, leftmargin =*, label={\footnotesize \arabic*$\ $}]
+    \setlength{\itemsep}{#1}
+    \vspace*{-0.7em}}
+
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\mylift}[1]{\vspace*{#1}}
+
+\usepackage{listings}
+
+\usepackage{sectsty}
+\sectionfont{\color{color1}}
+\subsectionfont{\color{color1}}
+\subsubsectionfont{\normalfont\color{color1}}
+
+\usepackage{titlesec}
+%\titlespacing{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing{\section}{0pc}{1ex}{1ex}
+\titlespacing{\subsection}{0pc}{0pc}{.5ex}
+\titlespacing{\subsubsection}{0pc}{0pc}{.2ex}
+
+\def\myname{Your Name}
+
+\begin{document}
+
+\begin{center}
+{\bf CURRICULUM VITAE}\\
+The Johns Hopkins School of Medicine\\
+\end{center}
+
+\begin{minipage}[t]{0.3\textwidth}
+  \centering\raisebox{\dimexpr \topskip-\height}{%
+  \includegraphics[width=\textwidth]{mySignature.png}}\\
+  \mylift{-1.7em}
+  \begin{flushleft}\myname\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.65\textwidth}
+  \hfill\today
+\end{minipage}
+
+\section*{DEMOGRAPHIC AND PERSONAL INFORMATION}
+
+\subsection*{Current Appointments}
+
+\begin{lyxlist}{0000-present}
+\item [{\textcolor{color1}{University}}]
+\item [{20{*}{*}\textendash 20{*}{*}}] position
+\item [{20{*}{*}\textendash present}] position
+
+\item [{\textcolor{color1}{Hospital}}]
+\item [{20{*}{*}\textendash 20{*}{*}}] position
+\item [{20{*}{*}\textendash present}] position
+
+\item [{\textcolor{color1}{Other}}]
+\item [{20{*}{*}\textendash 20{*}{*}}] position
+\item [{20{*}{*}\textendash present}] position
+
+\end{lyxlist}
+
+\subsection*{Personal Data}
+\begin{lyxlist}{0000-present}
+\item[{Address:}] Business Address\\
+Division of\\
+Department of\\  
+Building and room
+\item[{Tel:}]business phone number
+\item[{Fax:}]fax number
+\item[{Email:}]\href{mailto:}{}
+\end{lyxlist}
+
+\subsection*{Education and Training}
+\begin{lyxlist}{0000-present}
+\item[{\textcolor{color1}{Undergraduate}}]
+\item [{{20{*}{*}\textendash 20{*}{*}}}]degree, department, university, city, state\\
+Research Advisor: advisor's name
+Notes:
+\item[{\textcolor{color1}{Doctoral/Graduate}}]
+\item [{{20{*}{*}\textendash 20{*}{*}}}]degree, department, university, city, state\\
+Research Advisor: advisor's name\\
+Notes:
+\item[{\textcolor{color1}{Postdoctoral}}]
+\item [{{20{*}{*}\textendash 20{*}{*}}}]degree, department, university, city, state\\
+Research Advisor: advisor's name\\
+Notes:
+\end{lyxlist}
+
+\subsection*{Professional Experience}
+%Internship, residency, fellowship, etc. 
+%Indicate primary mentors for scholarly activities where applicable
+%Year		Position, Institution/City
+
+\begin{lyxlist}{0000-present}
+\item [{20{*}{*}\textendash 20{*}{*}}]position, institution, city
+
+\end{lyxlist}
+
+\section*{PUBLICATIONS \ {\small \em  White numbers indicate first or senior author manuscripts.}}
+
+%Instructions for all publication types:	
+%List in chronological order, with earliest first
+%Under each heading, number consecutively starting at 1
+%Only the candidate’s name should be bolded (do not bold journal titles, society names or mentee names)
+%Do not include submitted, in preparation or planned manuscript
+%In the list of authors:	Show all authors for all publications
+%Bold your name as an author in each publication
+%Indicate mentees by underlining their names
+%Delete extra periods 
+%Delete “and” between author names
+%If you are not the first or senior author, or the list of authors is 10 or more, specify the following at the end of the reference: 
+%Your role - such as data analysis, manuscript writing, obtained funding, steering committee, etc. 
+%Joint authorship or corresponding authorship
+%[SI/QI] if the article is also considered to be a system innovation/quality improvement publication 
+
+\subsection*{Original Research [OR]}
+%Include multi-authored clinical trials, experimental studies (including in vivo, in vitro, in silico studies), educational research, systematic reviews, meta-analyses. 
+%Use the standard reference citation format: Author F/MI, Second author F/MI, Third author F/MI, (etc.). Title. Journal. Year; Volume (Number): page-page. Example: Jones BB, *Smith JB, Friend LM. Title of article. J Am Soc. 2015;14(1):16-42; *corresponding author; [SI/QI].
+
+\myben{0.4em}
+
+\item
+citation\\
+\myrole{my role.}
+
+\mine
+
+\ee
+
+\subsection*{Review Articles [RA]}
+\myben{0.4em}
+\item
+\mine
+\ee
+
+%Optional sections
+%Guidelines/Protocols, Consensus Statement, Expert Opinion, Consortium Articles [GL] 
+%Editorials [ED]
+%Letters, Correspondence [LT]
+%Proceedings Reports [PR]					
+%Methods and Techniques, “How I Do It” articles [MT] 	 
+%Research Letters/White Papers/Brief Reports [RL]		
+%Published Curricula [PC], Learner Assessment Tools [PC] 	 
+%Media Releases or Interviews [MR]
+%Other Media [OM] (Videos, Websites, Blogs, Social Media, etc.)
+
+%Mandatory but empty sections can be listed at the end of the section, single-spaced
+\subsection*{Case Reports [CR] \ {\normalfont {\color{color0} None.}}} 
+\subsection*{Book Chapters, Monographs [BC] \ {\normalfont {\color{color0} None.}}}
+\subsection*{Books, Textbooks [BK] \ {\normalfont {\color{color0} None.}}}
+
+\section*{FUNDING}
+% In this section, the headings displayed in all capitals are required. 
+% If there is data to report in a subsection, you must divide the data into Current, Pending, Previous
+% If there is no data to report, list “None” and you may remove the subheadings.
+% List funding in chronological order (earliest first by start date) under the appropriate subheading(s) % Advise if a current grant is in a No Cost Extension (NCE)
+%Required format:
+%Date		Title
+%Identification number, Sponsor
+%Total direct cost
+%PI: Principal Investigator [if not you] Role; your percent effort; Notes
+
+\subsection*{EXTRAMURAL FUNDING}
+\subsection*{Research Extramural Funding}
+%Grants or contracts obtained to support a research initiative
+\begin{lyxlist}{00/00/00-00/00/00 n.c.e}
+\item[{\textcolor{color1}{Current}}] 
+
+\item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\
+Identification number, Sponsor\\
+Total Direct Cost \\
+\myrole{P.I. my percent effort}\\
+Notes
+
+\item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\
+Identification number, Sponsor\\
+Total Direct Cost \\
+P.I. Principal Investigator's name\\
+\myrole{}
+Notes
+
+\item[{\textcolor{color1}{Pending}}] 
+
+\item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\
+Identification number, Sponsor\\
+Total Direct Cost \\
+P.I. Principal Investigator's name\\
+\myrole{}
+Notes
+
+\item[{\textcolor{color1}{Previous}}] 
+
+\item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\
+Identification number, Sponsor\\
+Total Direct Cost \\
+P.I. Principal Investigator's name\\
+\myrole{}
+Notes
+
+\end{lyxlist}
+
+
+\subsection*{Educational Extramural Funding}
+%Grants or contracts obtained to support an educational initiative, including training grants
+
+\begin{lyxlist}{00/00/00-00/00/00 n.c.e}
+\item[{\textcolor{color1}{Current}}] 
+
+\item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\
+Identification number, Sponsor\\
+Total Direct Cost \\
+P.I. Principal Investigator's name\\
+\myrole{}
+Notes
+
+\item[{\textcolor{color1}{Pending}}] 
+
+\item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\
+Identification number, Sponsor\\
+Total Direct Cost \\
+P.I. Principal Investigator's name\\
+\myrole{}
+Notes
+
+\item[{\textcolor{color1}{Previous}}] 
+
+\item[{{*}/{*}/{*}{*}\textendash {*}/{*}/{*}{*} n.c.e.}]Title\\
+Identification number, Sponsor\\
+Total Direct Cost \\
+P.I. Principal Investigator's name\\
+\myrole{}
+Notes
+
+%\item[{\textcolor{color1}{Previous}}]None.
+
+\end{lyxlist}
+
+%Clinical Extramural Funding – Grants or contracts obtained to support a clinical initiative.
+%System Innovation or Quality Improvement Extramural Funding -Grants or contracts obtained to support an initiative 
+%Other Extramural Funding - Includes philanthropy	
+
+\subsection*{INTRAMURAL FUNDING \ {\normalfont {\color{color0} None.}}} 
+
+\section*{CLINICAL ACTIVITIES \ {\normalfont {\color{color0} None.}}} 
+%List “None” here if there is no data to report in this entire CLINICAL ACTIVITIES section (you may then remove all the subheadings within this CLINICAL ACTIVITIES section). If there IS data to report, then the following headings and subheadings are required (list “none” to the right of each subheading if there is no data to report).
+%Clinical Focus
+%Provide up to 100 word narrative, bulleted accomplishments, or key words that express your clinical focus. 
+%This is particularly helpful for a “Clinician of Distinction”
+
+%Certification
+%Medical, other state/government licensure
+%Date		State info, identification #, any explanatory notes
+%Boards, other specialty certification
+%Date		Specialty name, identification #, any explanatory notes 
+
+%Clinical (Service) Responsibilities
+%Date		Role/time commitment, specialty
+	
+%Clinical Productivity
+%Annual number of patients evaluated or treated, procedures performed, tertiary referrals, wRVUs, etc.
+%Clinical Draw from outside local/regional area (reflecting national/international reputation)
+%Date		X of Y outpatients came from out-of-state: list states or countries
+
+%Membership in or examiner for specialty board
+%Date		Role; name of specialty board
+
+%Clinical Program Building / Leadership
+%Date		Role/percent effort; name of clinical program; impact of program outside of JHMI/region
+
+%Clinical Demonstration Activities to external audience, on or off campus
+%Date		Clinical technique/procedure/program, observing party, venue
+
+%Development of nationally/internationally recognized clinical standard of care
+%May or may not be published in peer-reviewed journals
+%Date
+
+\section*{EDUCATIONAL ACTIVITIES} 
+%List “None” here if there is no data to report in this entire EDUCATIONAL ACTIVITIES section (you may then remove all the subheadings within this EDUCATIONAL ACTIVITIES section). If there IS data to report, then the following headings and subheadings are required (list “none” to the right of each subheading if there is no data to report).
+\subsection*{EDUCATIONAL FOCUS}
+%Provide up to 100 word narrative, bulleted accomplishments, or key words that express your educational focus
+My educational focus is on ...  
+
+\subsection*{TEACHING}
+%Include date, role, learner level, course title, venue
+%Under each heading, divide into JHMI/Regional, National and International 
+
+\subsection*{Classroom Instruction}
+\begin{lyxlist}{2020 (Winter, virtual)}
+
+\item[{\textcolor{color1}{JHMI}}]
+
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\item[{\textcolor{color1}{National}}]
+
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\item[{\textcolor{color1}{International}}]
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\end{lyxlist}
+
+\subsection*{CME instruction}
+\begin{lyxlist}{2020 (Winter, virtual)}
+
+\item[{\textcolor{color1}{JHMI}}]
+
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\item[{\textcolor{color1}{National}}]
+
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\item[{\textcolor{color1}{International}}]
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\end{lyxlist}
+
+\subsection*{Workshops/Seminars}
+\begin{lyxlist}{2020 (Winter, virtual)}
+
+\item[{\textcolor{color1}{JHMI}}]
+
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\item[{\textcolor{color1}{National}}]
+
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\item[{\textcolor{color1}{International}}]
+\item[{YYYY, semester}]role, learner level, course title, venue
+
+\end{lyxlist}
+
+\subsection*{MENTORING}
+\subsection*{Pre-doctoral Advisees/Mentees}
+\begin{lyxlist}{20{*}{*}\textendash 20{*}{*}}
+%1995 – 1998   	Brian K. Smithson, MD, [chief resident], currently associate professor, Pediatrics, University of Y, city, state. Awarded American Journal of Pediatrics Career Development Award (1997); co-authored articles OR 4, LE 1
+\item[{20{*}{*}\textendash 20{*}{*}}]mentee name, degree, present position; awards/grants/degrees received under your direction, numbered entries in this cv of shared publications
+\end{lyxlist}
+
+\subsection*{Post-doctoral Advisees/Mentees}
+\begin{lyxlist}{20{*}{*}\textendash 20{*}{*}}
+\item[{20{*}{*}\textendash 20{*}{*}}]mentee name, degree, present position; awards/grants/degrees received under your direction, numbered entries in this cv of shared publications
+\end{lyxlist}
+
+\subsection*{Thesis Committees}
+\begin{lyxlist}{20{*}{*}\textendash 20{*}{*}} %so descriptions are aligned with previous section	
+\item[{YYYY}]Mentee name, thesis title (if available), your role, any explanatory notes
+\end{lyxlist}
+
+\subsection*{Educational Program Building/Leadership \ {\normalfont {\color{color0} None.}}} 
+
+\subsection*{Educational Demonstration Activities to external audience on or off campus \ {\normalfont {\color{color0} None.}}} 
+
+\subsection*{Clinical Instruction \ {\normalfont {\color{color0} None.}}} 
+
+\section*{RESEARCH ACTIVITIES}
+%List “None” here if there is no data to report in this entire RESEARCH ACTIVITIES section (you may then remove all the subheadings within this RESEARCH ACTIVITIES section). If there IS data to report, then the following headings and subheadings are required (list “none” to the right of each subheading if there is no data to report).
+
+\subsection*{Research Focus}
+%Provide up to 100 word narrative, bulleted accomplishments, or key words that express your research focus or your NIH Biosketch section A here.
+I study ...
+
+\subsection*{Research Program Building/Leadership}
+
+\begin{lyxlist}{M/YY \textendash M/YY}
+\item[{M/YY\textendash M/YY}]Role, name of research/basic science program, notes
+
+\end{lyxlist}
+	
+\subsection*{Research Demonstration Activities \normalfont\textcolor{color0}{None.}}
+%to external audience, on or off campus 
+%Date		Research technique, observing party, venue
+
+\subsection*{Inventions, Patents, Copyrights \normalfont\textcolor{color0}{None.}}
+%Note pending or date awarded
+%Date Filed		Role, title, any explanatory notes, date awarded
+
+\subsection*{Technology Transfer Activities \normalfont\textcolor{color0}{None.}}
+%e.g. Company Start-ups
+%Date		Role, title, notes
+
+\section*{SYSTEM INNOVATION AND QUALITY IMPROVEMENT ACTIVITIES \normalfont\textcolor{color0}{None.}}
+%List “None” here if there is no data to report in this entire SYSTEM INNOVATION AND QUALITY IMPROVEMENT ACTIVITIES section (you may then remove all the subheadings within this SYSTEM INNOVATION AND QUALITY IMPROVEMENT ACTIVITIES section). If there IS data to report, then the following headings and subheadings are required (list “none” to the right of each subheading if there is no data to report).
+%\section*{System Innovation Focus}
+%Provide up to 100 word narrative, bulleted accomplishments, or key words that express your SI/QI focus
+
+%\section*{System Innovation and Quality Improvement efforts within JHMI}
+%Date		Role/percent effort; name of site intervention, venue(s), and results (e.g., clinical outcomes, process measures, financial)
+	
+%\section*{System Innovation and Quality Improvement efforts outside of JHMI}
+%Date		Role/percent effort; name of site intervention, venue(s) and results (e.g., clinical outcomes, process measures, financial)
+	
+%\section*{System Innovation and Quality Improvement Program Building/Leadership}
+%Date		Role/percent effort; name of Innovation and QI program
+
+\section*{ORGANIZATIONAL ACTIVITIES}
+\subsection*{Institutional Administrative Appointments}
+%Date		Role, Committees, any explanatory notes
+%2000-2001		Member, Search Committee for Chief of Division of x 
+%2001-2002		Member, Pediatric Residency Curriculum Committee
+\begin{lyxlist}{0000-present}
+\item[{YYYY}]Role, Committees, any explanatory notes
+\end{lyxlist}
+
+\subsection*{Journal peer review activities}
+%Date you first reviewed for them….Journal full name (do not abbreviate here); we do not need to know each year that you reviewed a manuscript
+%1994-present		Journal of Adolescent Medicine
+
+\begin{lyxlist}{JHMI/regional}
+\item[{YYYY-present}]journal name, ad-hoc reviewer
+\item[{YYYY-present}]journal name, associate editor
+\end{lyxlist}
+
+\subsection*{Other peer review activities [non medico-legal]}
+\begin{lyxlist}{JHMI/regional}
+\item[{YYYY}]role, organization, notes
+\end{lyxlist}
+	
+\subsection*{Advisory Committees, Review Groups/Study Sections}
+\begin{lyxlist}{JHMI/regional}
+\item[{YYYY-present}]role, organization, notes
+
+\end{lyxlist}
+
+
+\subsection*{Professional Societies}
+%Note, when you include additional duties for the society, move “Member” to its own line; see examples
+%Date		Society
+%Date		Role, committee
+%1985-1990  Member, Society for Pediatric Research (SPR) 
+%1993-present   The Endocrine Society (ES)
+                %1993-present    Member (ES)
+                %1995-1996       Treasurer (ES)
+                %1997-2001       Member, Membership Committee (ES)
+%1993-present   Member, American Pediatric Society (APS)
+
+\begin{lyxlist}{JHMI/regional}
+\item[{YYYY-present}]member, society
+
+\end{lyxlist}
+
+\subsection*{Session Chair}
+%Date		Sponsor/organization/group
+\begin{lyxlist}{JHMI/regional}
+\item[{\textcolor{color1}{JHMI/regional}}]
+
+\item[{MM/YY}]Sponsor/organization/group
+
+\item[{\textcolor{color1}{National}}]
+
+\item[{MM/YY}]Sponsor/organization/group
+
+\item[{\textcolor{color1}{International}}]
+
+\item[{MM/YY}]Sponsor/organization/group
+
+%\item[{\textcolor{color1}{JHMI/regional}}]None.
+%\item[{\textcolor{color1}{National}}]None.
+
+\end{lyxlist}
+
+\subsection*{Conference Organizer \normalfont\textcolor{color0}{None.}}
+%Date		Sponsor/organization/group
+%JHMI/Regional
+%National
+%International
+
+\subsection*{Consultantships \normalfont\textcolor{color0}{None.}}
+%Date		Sponsor/organization/group
+
+\section*{RECOGNITION}
+%If there is no data to report for this entire section, list “None” or “N/A” to the right of this RECOGNITION section heading and remove the below subheadings within this section. If there is data to report, then all subheadings must be included. For each subheading, if there is no data to report, list “None” or “N/A”. Subheadings with responses of “None” or “N/A” may be grouped together, single spaced at the end of the section.
+
+\subsection*{Awards, Honors}
+%Date		Title, description, sponsor, any explanatory notes
+%1991		“Pediatric Leaders for the 21st Century,” American Society of Pediatrics 
+%1999		Johns Hopkins Young Investigators Award
+%2007		Teacher of the Year Award, Class of 2007, Johns Hopkins University School of Medicine
+\begin{lyxlist}{JHMI/regional}
+
+\item[{YYYY}]Title, description, sponsor, any explanatory notes
+
+\end{lyxlist}
+
+\subsection*{Invited Talks} 
+%Must be sorted into JHMI/Regional, National, International
+%Such as grand rounds, keynote addresses, visiting professorships. Do not duplicate entries already shown above.
+%If you have several visiting professorships, feel free to separate them into their own subcategory
+%Date		Title, sponsor, venue, any explanatory notes
+%3/31/05		Speaker, JHU Pediatric Grand Rounds, “Chronic disease in children,” Baltimore, MD
+\begin{lyxlist}{JHMI/regional}
+\item[{\textcolor{color1}{JHMI/regional}}]
+\item[{YYYY}]Title, sponsor, venue, any explanatory notes (including talk title)
+
+\item[{\textcolor{color1}{National}}]
+\item[{YYYY}]Title, sponsor, venue, any explanatory notes (including talk title)
+
+\item[{\textcolor{color1}{International}}]
+\item[{YYYY}]Title, sponsor, venue, any explanatory notes (including talk title)
+
+%\item[{\textcolor{color1}{International}}]None.
+
+\end{lyxlist}
+	
+%subsubsection*{Visiting Professorships}
+%1/15/09		University of Kansas School of Medicine – Kansas City, “Advances in Pediatric Nephrology” 
+%2/1/11		University of Southern California – Los Angeles, “Chronic disease in children”
+
+%OPTIONAL
+\section*{OTHER PROFESSIONAL ACCOMPLISHMENTS}
+\subsection*{Oral/Podium Presentations}
+\begin{lyxlist}{JHMI/regional}
+\item[{YYYY}]Title, Sponsor, location, publication notes; who gave the presentation if not you
+\end{lyxlist}
+	
+\subsection*{Community Services}
+\begin{lyxlist}{JHMI/regional}
+\item[{YYYY-YYYY}]Role, Organization, notes
+\end{lyxlist}
+
+%Military Service
+%Humanitarian Activities (optional)
+%Philanthropic Activities (optional)
+%Other (optional)
+
+%CONGRATULATIONS – GREAT JOB!!!!
+%PRIOR TO SUBMISSION, CHECK THE ABOVE TO:
+%Remove instructional text shown in red font
+%Remove sample responses shown in green font
+%Remove the first page of instructions
+%CVs that do not adhere to the required format will delay the application process
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

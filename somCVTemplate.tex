@@ -70,15 +70,22 @@
 		 \renewcommand{\makelabel}[1]{##1\hfil}}}
 	{\end{list}}
 
-% from Carrie's CV	
+% from Carrie's CV
+%to highlight my first and last author publications
 \newcommand{\mine}{
   \addtocounter{enumi}{1}
 \item[\fcolorbox{white}{color1}{\color{white} \scriptsize \arabic{enumi}}]
 }
 
+%to highlight explanation of my role if not first/last author or PI
 \usepackage{calc}
 \newcommand{\myrole}[1]{
   {\color{color3} \rlap{\underline{Role:}} \hspace{\widthof{Role: }}#1}
+}
+
+%to indicate authors who were trainees
+\newcommand{\mentee}[1]{
+  \underline{\smash{#1}}
 }
 
 \newcommand{\myben}[1]
